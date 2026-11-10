@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stage 2 Photography — Assessments and resources</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --text:        #1F2022;
+    --text-muted:  #6B6C70;
+    --border:      #E6E6E9;
+    --focus:       #2F8FC4;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; }
+
+  body{
+    background: transparent;
+    padding: 4px 20px 20px;   /* top, sides, bottom */
+    font-family: "Inter", -apple-system, "Segoe UI", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: var(--text);
+  }
+
+  .section + .section{ margin-top: 28px; }
+
+  .section > h2{
+    margin: 0 0 18px;
+    padding: 10px 16px;
+    background: #F4F4F6;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+  }
+
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .card{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--c-border, var(--border));
+    background: var(--c-bg, #FFFFFF);
+    border-radius: 14px;
+    padding: 18px 18px 16px;
+    text-decoration: none;
+    color: var(--text);
+    transition: background-color 130ms ease, border-color 130ms ease,
+                transform 130ms ease, box-shadow 130ms ease;
+  }
+  .card:hover{
+    background: var(--c-hover, #F3F4F6);
+    border-color: var(--c-border-hover, #C5C6CC);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(26, 28, 34, 0.10);
+  }
+  .card:active{ transform: translateY(0); }
+  .card:focus-visible{ outline: 2px solid var(--focus); outline-offset: 2px; }
+
+  /* ── Palettes: bg, hover, border, border-hover, ink ───── */
+  .t1      { --c-bg:#E8F4FC; --c-hover:#D5EAF8; --c-border:#E8F4FC; --c-border-hover:#93CBEC; --c-rule:#C7E3F5; --c-ink:#2578A8; }
+  .t2      { --c-bg:#FBE7E9; --c-hover:#F6D4D8; --c-border:#FBE7E9; --c-border-hover:#E4A0A8; --c-rule:#F2CFD4; --c-ink:#B8405A; }
+  .t3      { --c-bg:#FDEFE1; --c-hover:#FAE0CA; --c-border:#FDEFE1; --c-border-hover:#EBBA8C; --c-rule:#F5DDC6; --c-ink:#AC601A; }
+  .resource{ --c-bg:#E8F6EC; --c-hover:#D5EEDD; --c-border:#E8F6EC; --c-border-hover:#92D3A6; --c-rule:#C9E8D3; --c-ink:#2A7D4F; }
+
+  .card h3{
+    margin: 0 0 4px;
+    font-size: 15.5px;
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.005em;
+  }
+
+  .type{
+    margin: 0 0 9px;
+    font-size: 12.5px;
+    line-height: 1.4;
+    color: var(--text-muted);
+  }
+
+  .desc{
+    margin: 0;
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: #45464A;
+  }
+
+  .external{
+    align-self: flex-start;
+    margin-top: 9px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #44464B;
+    background: rgba(255,255,255,0.9);
+    border-radius: 6px;
+    padding: 3px 8px;
+  }
+
+  .reqs{
+    margin: 11px 0 13px;
+    font-size: 12.5px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--c-ink, var(--text-muted));
+  }
+
+  .foot{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: auto;
+    padding-top: 13px;
+    border-top: 1px solid var(--c-rule, var(--border));
+  }
+
+  .due{ font-size: 13px; font-weight: 500; color: var(--text-muted); }
+
+  .weight{
+    flex: none;
+    font-size: 12.5px;
+    font-weight: 600;
+    border-radius: 7px;
+    padding: 3px 9px;
+    background: rgba(255,255,255,0.9);
+    color: var(--c-ink);
+  }
+
+  @media (max-width: 880px){ .grid{ grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 520px){ .grid{ grid-template-columns: 1fr; gap: 12px; } }
+  @media (prefers-reduced-motion: reduce){
+    .card{ transition: background-color 130ms ease, border-color 130ms ease; }
+    .card:hover{ transform: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══ ASSESSMENTS ════════════════════════════════════════ -->
+<section class="section">
+  <h2>Assessments</h2>
+  <div class="grid">
+
+    <!-- ── CONTROLLING MOTION — AT1 ────────────────────────── -->
+    <a class="card t1" href="https://www.google.com" target="_blank" rel="noopener">
+      <h3>Controlling Motion</h3>
+      <p class="type">Assessment Type 1 — Specialised Skills Task</p>
+      <p class="desc">Take two photographs that show the effect shutter speed has on the way motion appears.</p>
+      <p class="reqs">2 photos, 750 words</p>
+      <span class="foot">
+        <span class="due">Due TBD</span>
+        <span class="weight">10%</span>
+      </span>
+    </a>
+
+    <!-- ── CREATIVE TECHNIQUES — AT1 ───────────────────────── -->
+    <a class="card t1" href="https://www.google.com" target="_blank" rel="noopener">
+      <h3>Creative Techniques</h3>
+      <p class="type">Assessment Type 1 — Specialised Skills Task</p>
+      <p class="desc">Take photographs that explore two creative photographic techniques.</p>
+      <p class="reqs">2 photos, 750 words</p>
+      <span class="foot">
+        <span class="due">Due TBD</span>
+        <span class="weight">10%</span>
+      </span>
+    </a>
+
+    <!-- ── DESIGN PROCESS AND PRODUCT — AT2 ────────────────── -->
+    <a class="card t2" href="https://www.google.com" target="_blank" rel="noopener">
+      <h3>Design Process and Product</h3>
+      <p class="type">Assessment Type 2</p>
+      <p class="desc">Plan, design and photograph to produce a product of your own choosing.</p>
+      <p class="reqs">6 photos, 3 products, 3000 words</p>
+      <span class="foot">
+        <span class="due">Due TBD</span>
+        <span class="weight">50%</span>
+      </span>
+    </a>
+
+    <!-- ── RESOURCE STUDY — AT3 (external) ─────────────────── -->
+    <a class="card t3" href="https://www.google.com" target="_blank" rel="noopener">
+      <h3>Resource Study</h3>
+      <p class="type">Assessment Type 3</p>
+      <p class="desc">Explore the technical and ethical elements that relate to your chosen product for Design Process and Product.</p>
+      <span class="external">Externally assessed by SACE</span>
+      <p class="reqs">Test photos, 2000 words</p>
+      <span class="foot">
+        <span class="due">Due TBD</span>
+        <span class="weight">30%</span>
+      </span>
+    </a>
+
+  </div>
+</section>
+
+<!-- ═══ RESOURCES — replace each href with your link ═══════ -->
+<section class="section">
+  <h2>Resources</h2>
+  <div class="grid">
+
+    <a class="card resource" href="https://www.google.com" target="_blank" rel="noopener">
+      <h3>Course Plan</h3>
+      <p class="desc">What we cover across the year, and how the assessments fit together.</p>
+    </a>
+
+    <a class="card resource" href="https://www.google.com" target="_blank" rel="noopener">
+      <h3>Exposure Triangle</h3>
+      <p class="desc">Slide deck on aperture, shutter speed and ISO, and how they trade off.</p>
+    </a>
+
+    <a class="card resource" href="https://www.google.com" target="_blank" rel="noopener">
+      <h3>Photographic Terms</h3>
+      <p class="desc">Slide deck covering the vocabulary you need for your written work.</p>
+    </a>
+
+    <a class="card resource" href="https://www.google.com" target="_blank" rel="noopener">
+      <h3>SACE Subject Assessment Advice</h3>
+      <p class="desc">What markers look for, and common feedback from previous years.</p>
+    </a>
+
+  </div>
+</section>
+
+</body>
+</html>
